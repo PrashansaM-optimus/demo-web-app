@@ -1,0 +1,22 @@
+<div>
+    <h1 class="center">Meeting Information</h1>
+    <div class="end"><img (click)="onExportClick()" class="pointer" tooltip="Export to Excel" src="https://img.icons8.com/color/48/000000/ms-excel.png"></div>
+    <div>
+        <div class="flex flex-row b">
+            <div class="flex-grow-1 flex-basis-0 border-rb border-top padding-l5 border-left">Mentor</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb border-top padding-l5">Menti</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb border-top padding-l5">Location</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb border-top padding-l5">Agenda</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb border-top padding-l5">Action Items</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb border-top padding-l5">Issues</div>
+        </div>
+        <div *ngFor="let meeting of meetings;" class="flex flex-row">
+            <div class="flex-grow-1 flex-basis-0 border-rb padding-l5 border-left">{{meeting.mentor}}</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb padding-l5">{{meeting.menti}}</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb padding-l5">{{meeting.location}}</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb padding-l5">{{meeting.agenda}}</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb padding-l5">{{meeting.action}}</div>
+            <div class="flex-grow-1 flex-basis-0 border-rb padding-l5">{{meeting.issue}}</div>
+        </div>
+    </div>
+</div>

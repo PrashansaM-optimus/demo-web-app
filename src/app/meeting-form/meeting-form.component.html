@@ -1,0 +1,35 @@
+<div>
+    <h1 class="padding-5 center">Form for mentor menti meeting details</h1>
+    <div *ngIf="success">
+        <div class="success">{{success}}</div>
+        <br/>
+    </div>
+    
+    <form #meetingForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group flex padding-5">
+            <div for="mentorName" class="width-200 b">Mentor Name:</div>
+            <input type="text" class="form-control flex-grow-1 flex-basis-0" id="mentorName" name="mentorName" [(ngModel)]="meeting.mentor" required/>
+        </div>
+        <div class="form-group flex padding-5">
+            <div for="mentiName" class="width-200 b">Menti Name:</div>
+            <input type="text" class="form-control flex-grow-1 flex-basis-0" id="mentiName" name="mentiName" [(ngModel)]="meeting.menti" required/>
+        </div>
+        <div class="form-group flex padding-5">
+            <div for="location" class="width-200 b">Meeting Location:</div>
+            <input type="text" class="form-control flex-grow-1 flex-basis-0" id="location" name="location" [(ngModel)]="meeting.location" required/>
+        </div>
+        <div class="form-group flex padding-5">
+            <div for="agenda" class="width-200 b">Agenda:</div>
+            <input type="text" class="form-control flex-grow-1 flex-basis-0" id="agenda" name="agenda" [(ngModel)]="meeting.agenda" required/>
+        </div>
+        <div class="form-group flex padding-5">
+            <div for="location" class="width-200 b">Meeting Agenda:</div>
+            <input type="text" class="form-control flex-grow-1 flex-basis-0" id="action" name="action" [(ngModel)]="meeting.action" required/>
+        </div>
+        <div class="form-group flex padding-5">
+            <div for="issue" class="width-200 b">Issues:</div>
+            <input type="text" class="form-control flex-grow-1 flex-basis-0" id="issue" name="issue" [(ngModel)]="meeting.issue" required/>
+        </div>
+        <div><button type="submit" [disabled]="!meetingForm.form.valid">Submit</button></div>
+    </form>
+</div>
